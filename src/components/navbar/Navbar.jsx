@@ -10,7 +10,7 @@ import {
   FaBars,
 } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import './navbar.css';
+import './Navbar.css';
 
 const ICON_SIZE = 20;
 
@@ -31,9 +31,9 @@ function Navbar({ visible, show }) {
           {!visible ? <FaAngleRight size={30} /> : <FaAngleLeft size={30} />}
         </button>
         <div>
-          <NavLink className="logo" to="/">
+          {/* <NavLink className="logo" to="/">
             <img src={require('../assets/logo.png')} alt="logo" />
-          </NavLink>
+          </NavLink> */}
           <div className="links nav-top">
             <NavLink to="/dashboard" className="nav-link">
               <FaThLarge size={ICON_SIZE} />
