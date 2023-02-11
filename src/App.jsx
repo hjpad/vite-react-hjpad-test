@@ -1,34 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
+import './index.css';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [navVisible, showNavbar] = useState(false);
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar visible={navVisible} show={showNavbar} />
+        <Routes>
+          <Route path="/" element={<Navigate to="/dashboard" />} />
+          <Route
+            path="/dashboard"
+            element={
+              <div className={!navVisible ? 'page' : 'page page-with-navbar'}>
+                <h1>Dashboard</h1>
+              </div>
+            }
+          />
+          <Route
+            path="/analytics"
+            element={
+              <div className={!navVisible ? 'page' : 'page page-with-navbar'}>
+                <h1>Analystics</h1>
+              </div>
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <div className={!navVisible ? 'page' : 'page page-with-navbar'}>
+                <h1>Orders</h1>
+              </div>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <div className={!navVisible ? 'page' : 'page page-with-navbar'}>
+                <h1>Settings</h1>
+              </div>
+            }
+          />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
