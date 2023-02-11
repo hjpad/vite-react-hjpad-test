@@ -42,6 +42,7 @@ nav {
   width: 100px;
   margin: auto;
   background: transparent;
+  background-image: url(logo.png);
 }
 
 .logo img {
