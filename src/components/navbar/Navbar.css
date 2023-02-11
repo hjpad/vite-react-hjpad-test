@@ -5,7 +5,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 15%;
+  width: 360px;
   min-height: 100vh;
   background-color: #362f49;
   padding: 2rem 1rem 1rem 1rem;
@@ -42,7 +42,6 @@ nav {
   width: 100px;
   margin: auto;
   background: transparent;
-  background-image: url(logo192.png);
 }
 
 .logo img {
@@ -91,7 +90,7 @@ nav {
 
 @media only screen and (max-width: 768px) {
   nav {
-    width: 40%;
+    width: 400px;
     padding: 10px;
   }
 }
@@ -102,7 +101,7 @@ nav {
     align-items: center;
   }
   nav {
-    width: 70%;
+    width: 400px;
     top: 38px;
     min-height: calc(100vh - 38px);
   }

@@ -31,10 +31,9 @@ function Navbar({ visible, show }) {
           {!visible ? <FaAngleRight size={30} /> : <FaAngleLeft size={30} />}
         </button>
         <div>
-          <NavLink className="logo" to="/">
-            {/* <img src={require('../../assets/logo.png')} alt="logo" /> */}
-            <img src="" alt="logo" />
-          </NavLink>
+          {/* <NavLink className="logo" to="/">
+            <img src={require('../../assets/logo.png')} alt="logo" />
+          </NavLink> */}
           <div className="links nav-top">
             <NavLink to="/dashboard" className="nav-link">
               <FaThLarge size={ICON_SIZE} />
